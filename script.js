@@ -420,5 +420,17 @@ function main1() {
     });
 
 }
+// Check if a counter already exists in localStorage
+let counter = localStorage.getItem("pageHits");
 
+// If no counter exists, initialize it
+if (!counter) {
+    counter = 0;
+}
+
+// Increment the counter and store it back
+counter++;
+localStorage.setItem("pageHits", counter);
+
+console.log(counter);
           
